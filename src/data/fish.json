@@ -1,0 +1,416 @@
+{
+    "albacore": {
+        "areas": "ocean",
+        "times": [
+            "6am-11am",
+            "6pm-2am"
+        ],
+        "seasons": [
+            "fall",
+            "winter"
+        ],
+        "used-in": "quest"
+    },
+    "anchovy": {
+        "areas": "ocean",
+        "seasons": [
+            "spring",
+            "fall"
+        ]
+    },
+    "angler": {
+        "areas": "town-river",
+        "seasons": "fall"
+    },
+    "blobfish": {
+        "areas": "night-market",
+        "seasons": "winter"
+    },
+    "bream": {
+        "areas": "rivers",
+        "times": "6pm-2am",
+        "used-in": [
+            "bundle",
+            "recipe"
+        ]
+    },
+    "bullhead": {
+        "areas": "mountain-lake",
+        "used-in": "bundle"
+    },
+    "carp": {
+        "areas": [
+            "mountain-lake",
+            "secret-woods",
+            "sewers"
+        ],
+        "used-in": [
+            "bundle",
+            "recipe"
+        ]
+    },
+    "catfish": {
+        "areas": [
+            "rivers",
+            "secret-woods",
+            "swamp"
+        ],
+        "times": "6am-12am",
+        "seasons": [
+            "spring",
+            "fall"
+        ],
+        "weather": "rain",
+        "used-in": [
+            "bundle",
+            "gift"
+        ]
+    },
+    "chub": {
+        "areas": [
+            "rivers",
+            "mountain-lake"
+        ],
+        "used-in": "bundle"
+    },
+    "crimsonfish": {
+        "areas": "ocean",
+        "seasons": "summer"
+    },
+    "dorado": {
+        "areas": "forest-river",
+        "times": "6am-7pm",
+        "seasons": "summer"
+    },
+    "eel": {
+        "areas": "ocean",
+        "times": "4pm-2am",
+        "seasons": [
+            "spring",
+            "fall"
+        ],
+        "weather": "rain",
+        "used-in": [
+            "bundle",
+            "recipe"
+        ]
+    },
+    "flounder": {
+        "areas": "ocean",
+        "times": "6am-8pm",
+        "seasons": [
+            "spring",
+            "summer"
+        ],
+        "used-in": "recipe"
+    },
+    "ghostfish": {
+        "areas": "mines",
+        "used-in": "bundle"
+    },
+    "glacierfish": {
+        "areas": "forest-river",
+        "seasons": "winter"
+    },
+    "halibut": {
+        "areas": "ocean",
+        "times": [
+            "6am-11am",
+            "7pm-2am"
+        ],
+        "seasons": [
+            "spring",
+            "summer",
+            "winter"
+        ]
+    },
+    "herring": {
+        "areas": "ocean",
+        "seasons": [
+            "spring",
+            "winter"
+        ]
+    },
+    "ice-pip": {
+        "areas": "ice-mines"
+    },
+    "largemouth-bass": {
+        "areas": "mountain-lake",
+        "times": "6am-7pm",
+        "used-in": [
+            "bundle",
+            "recipe",
+            "quest"
+        ]
+    },
+    "lava-eel": {
+        "areas": "lava-mines"
+    },
+    "legend": {
+        "areas": "mountain-lake",
+        "seasons": "spring",
+        "weather": "rain"
+    },
+    "lingcod": {
+        "areas": [
+            "rivers",
+            "mountain-lake"
+        ],
+        "seasons": "winter",
+        "used-in": "quest"
+    },
+    "midnight-carp": {
+        "areas": [
+            "mountain-lake",
+            "forest"
+        ],
+        "times": "10pm-2am",
+        "seasons": [
+            "fall",
+            "winter"
+        ],
+        "used-in": "recipe"
+    },
+    "midnight-squid": {
+        "areas": "night-market",
+        "seasons": "winter"
+    },
+    "mutant-carp": {
+        "areas": "sewers"
+    },
+    "octopus": {
+        "areas": "ocean",
+        "times": "6am-1pm",
+        "seasons": "summer",
+        "used-in": "gift"
+    },
+    "perch": {
+        "areas": [
+            "rivers",
+            "forest",
+            "mountain-lake"
+        ],
+        "seasons": "winter"
+    },
+    "pike": {
+        "areas": [
+            "rivers",
+            "forest"
+        ],
+        "seasons": [
+            "summer",
+            "winter"
+        ]
+    },
+    "pufferfish": {
+        "areas": "ocean",
+        "times": "12pm-4pm",
+        "seasons": "summer",
+        "weather": "sun",
+        "used-in": [
+            "bundle",
+            "gift",
+            "quest"
+        ]
+    },
+    "rainbow-trout": {
+        "areas": [
+            "rivers",
+            "mountain-lake"
+        ],
+        "times": "6am-7pm",
+        "seasons": "summer",
+        "weather": "sun",
+        "used-in": "recipe"
+    },
+    "red-mullet": {
+        "areas": "ocean",
+        "times": "6am-7pm",
+        "seasons": [
+            "summer",
+            "winter"
+        ]
+    },
+    "red-snapper": {
+        "areas": "ocean",
+        "times": "6am-7pm",
+        "seasons": [
+            "summer",
+            "fall"
+        ],
+        "weather": "rain",
+        "used-in": "bundle"
+    },
+    "salmon": {
+        "areas": "rivers",
+        "times": "6am-7pm",
+        "seasons": "fall",
+        "used-in": "recipe"
+    },
+    "sandfish": {
+        "areas": "ocean",
+        "times": "6am-8pm",
+        "used-in": [
+            "bundle",
+            "gift"
+        ]
+    },
+    "sardine": {
+        "areas": "ocean",
+        "times": "6am-7pm",
+        "seasons": [
+            "spring",
+            "fall",
+            "winter"
+        ],
+        "used-in": [
+            "bundle",
+            "recipe"
+        ]
+    },
+    "scorpion-carp": {
+        "areas": "ocean",
+        "times": "6am-8pm"
+    },
+    "sea-cucumber": {
+        "areas": "ocean",
+        "times": "6am-7pm",
+        "seasons": [
+            "fall",
+            "winter"
+        ],
+        "used-in": [
+            "recipe",
+            "quest"
+        ]
+    },
+    "shad": {
+        "areas": "rivers",
+        "times": "9am-2am",
+        "seasons": [
+            "spring",
+            "summer",
+            "fall"
+        ],
+        "weather": "rain",
+        "used-in": "bundle"
+    },
+    "slimejack": {
+        "areas": "bug-lair"
+    },
+    "smallmouth-bass": {
+        "areas": [
+            "town-river",
+            "forest"
+        ],
+        "seasons": [
+            "spring",
+            "fall"
+        ]
+    },
+    "spook-fish": {
+        "areas": "night-market",
+        "seasons": "winter"
+    },
+    "squid": {
+        "areas": "ocean",
+        "times": "6pm-2am",
+        "seasons": "winter",
+        "used-in": [
+            "recipe",
+            "quest"
+        ]
+    },
+    "stonefish": {
+        "areas": "mines"
+    },
+    "sturgeon": {
+        "areas": "mountain-lake",
+        "times": "6am-7pm",
+        "seasons": [
+            "summer",
+            "winter"
+        ],
+        "used-in": [
+            "bundle",
+            "gift"
+        ]
+    },
+    "sunfish": {
+        "areas": "rivers",
+        "times": "6am-7pm",
+        "seasons": [
+            "spring",
+            "summer"
+        ],
+        "weather": [
+            "sun",
+            "wind"
+        ],
+        "used-in": [
+            "bundle",
+            "recipe"
+        ]
+    },
+    "super-cucumber": {
+        "areas": "ocean",
+        "times": "6pm-2am",
+        "seasons": [
+            "summer",
+            "fall"
+        ],
+        "used-in": "gift"
+    },
+    "tiger-trout": {
+        "areas": "rivers",
+        "times": "6am-7pm",
+        "seasons": [
+            "fall",
+            "winter"
+        ],
+        "used-in": "bundle"
+    },
+    "tilapia": {
+        "areas": "ocean",
+        "times": "6am-2pm",
+        "seasons": [
+            "summer",
+            "fall"
+        ],
+        "used-in": "bundle"
+    },
+    "tuna": {
+        "areas": "ocean",
+        "times": "6am-7pm",
+        "seasons": [
+            "summer",
+            "winter"
+        ],
+        "used-in": [
+            "bundle",
+            "recipe"
+        ]
+    },
+    "void-salmon": {
+        "areas": "swamp",
+        "used-in": "bundle"
+    },
+    "walleye": {
+        "areas": [
+            "rivers",
+            "forest",
+            "mountain-lake"
+        ],
+        "times": "12pm-2am",
+        "seasons": "fall",
+        "weather": "rain",
+        "used-in": "bundle"
+    },
+    "woodskip": {
+        "areas": [
+            "secret-woods",
+            "forest-farm"
+        ],
+        "used-in": "bundle"
+    }
+}

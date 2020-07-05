@@ -1,0 +1,66 @@
+@use "../utils/variables";
+
+body {
+    background-color: hsl(210, 100%, 90%);
+    background-image: radial-gradient(#FFFFFF, hsl(210, 100%, 90%));
+}
+
+#fish-tracker {
+    align-self: center;
+    color: variables.$fish-text;
+    background-color: variables.$fish-bg;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid variables.$fish-border;
+    margin: 5rem;
+
+    h1 {
+        border-bottom: 1px solid variables.$fish-border;
+    }
+
+    #fish-tracker-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .section {
+            margin: 1rem;
+
+            h1 {
+                border-bottom: none;
+                margin: 0.2rem 0.5rem;
+            }
+        }
+    }
+
+    table {
+        background-color: hsl(210, 100%, 87%);
+
+        tr {
+            &:first-of-type {
+                td {
+                    border-top: 1px solid variables.$fish-border;
+                }
+            }
+
+            &:hover, &:active {
+                &:not(.checked) {
+                    background-color: hsl(210, 100%, 90%);
+                }
+            }
+
+            td {
+                border-bottom: 1px solid variables.$fish-border;
+
+                &:first-of-type {
+                    
+                    border-left: 1px solid variables.$fish-border;
+                }
+    
+                &:last-of-type {
+                    border-right: 1px solid variables.$fish-border;
+                }
+            }
+        }
+    }
+}

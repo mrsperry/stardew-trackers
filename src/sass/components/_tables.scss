@@ -1,0 +1,64 @@
+@use "../utils/variables";
+
+table {
+    border-spacing: 0;
+    border-radius: 1rem;
+
+    tr {
+        cursor: pointer;
+        transition: background-color 150ms ease-in-out;
+        padding: 0.35rem;
+        height: 5rem;
+
+        &.checked {
+            background-color: variables.$tracker-checked;
+        }
+
+        &:hover, &:active {
+            &.checked {
+                background-color: variables.$tracker-checked-hover;
+            }
+        }
+        
+        &:first-of-type {
+            td {
+                &:first-of-type {
+                    border-radius: 1rem 0rem 0rem;
+                }
+
+                &:last-of-type {
+                    border-radius: 0rem 1rem 0rem 0rem;
+                }
+            }
+        }
+
+        &:last-of-type {
+            td {
+                &:first-of-type {
+                    border-radius: 0rem 0rem 0rem 1rem;
+                }
+
+                &:last-of-type {
+                    border-radius: 0rem 0rem 1rem;
+                }
+            }
+        }
+
+        td {
+            padding: 0.35rem 0.75rem;
+
+            .info-holder {
+                display: flex;
+                align-items: center;
+
+                &.centered {
+                    justify-content: center;
+                }
+
+                span {
+                    margin-left: 0.5rem;
+                }
+            }
+        }
+    }
+}

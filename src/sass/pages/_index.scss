@@ -1,0 +1,78 @@
+@use "../utils/variables";
+
+#main {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        /* Can't use `@each` loop because SCSS doesn't support getting variable names with it */
+        #fish-tracker {
+            color: variables.$fish-text;
+            background-color: variables.$fish-bg;
+            border: 1px solid variables.$fish-border;
+
+            &:hover, &:active {
+                background-color: variables.$fish-bg-hover;
+                box-shadow: 0rem 0rem 2rem variables.$fish-border;
+            }
+
+            h1 {
+                border-bottom: 1px solid variables.$fish-border;
+            }
+        }
+
+        #crop-tracker {
+            color: variables.$crop-text;
+            background-color: variables.$crop-bg;
+            border: 1px solid variables.$crop-border;
+
+            &:hover, &:active {
+                background-color: variables.$crop-bg-hover;
+                box-shadow: 0rem 0rem 2rem variables.$crop-border;
+            }
+
+            h1 {
+                border-bottom: 1px solid variables.$crop-border;
+            }
+        }
+
+        #npc-tracker {
+            color: variables.$npc-text;
+            background-color: variables.$npc-bg;
+            border: 1px solid variables.$npc-border;
+
+            &:hover, &:active {
+                background-color: variables.$npc-bg-hover;
+                box-shadow: 0rem 0rem 2rem variables.$npc-border;
+            }
+
+
+            h1 {
+                border-bottom: 1px solid variables.$npc-border;
+            }
+        }
+
+        .card {
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0.5rem 0.5rem 1rem #DDDDDD;
+            transition: all 250ms ease-in-out;
+            width: 30rem;
+            height: 10rem;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem;
+
+            h1 {
+                width: 100%;
+                padding-bottom: 0.25rem;
+            }
+
+            p {
+                margin: 0.5rem;
+            }
+        }
+    }
+}
