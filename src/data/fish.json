@@ -248,7 +248,7 @@
         "used-in": "recipe"
     },
     "sandfish": {
-        "areas": "ocean",
+        "areas": "calico-desert",
         "times": "6am-8pm",
         "used-in": [
             "bundle",
@@ -269,7 +269,7 @@
         ]
     },
     "scorpion-carp": {
-        "areas": "ocean",
+        "areas": "calico-desert",
         "times": "6am-8pm"
     },
     "sea-cucumber": {
