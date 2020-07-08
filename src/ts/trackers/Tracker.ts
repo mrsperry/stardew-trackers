@@ -7,6 +7,17 @@ class Tracker {
      */
     protected constructor(namespace: string) {
         this.namespace = namespace;
+
+        $("#reset-tracker")
+            .on("click", (): void => {
+                // Clear local storage data
+                State.reset(this.namespace);
+
+                // Remove highlights on all checked rows
+                for (const element of $("tr.checked")) {
+                    $(element).removeClass("checked");
+                }
+            });
     }
 
     /**

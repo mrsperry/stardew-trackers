@@ -57,6 +57,13 @@ class Utils {
 class Tracker {
     constructor(namespace) {
         this.namespace = namespace;
+        $("#reset-tracker")
+            .on("click", () => {
+            State.reset(this.namespace);
+            for (const element of $("tr.checked")) {
+                $(element).removeClass("checked");
+            }
+        });
     }
     addGraphic(row, data) {
         const element = $("<td>")
@@ -101,7 +108,7 @@ class Tracker {
     registerEvents(table) {
         for (const child of table.children()) {
             $(child).on("click", () => {
-                this.saveToggleState($(child));
+                this.toggleState($(child));
             });
         }
     }
@@ -113,11 +120,11 @@ class Tracker {
             }
         }
     }
-    saveToggleState(child) {
-        const type = $(child).attr("type");
+    toggleState(element) {
+        const type = $(element).attr("type");
         if (type != null) {
             this.toggleRows(type);
-            State.setValue(this.namespace, type, $(child).hasClass("checked"));
+            State.setValue(this.namespace, type, $(element).hasClass("checked"));
         }
     }
     toggleRows(type) {
@@ -217,9 +224,9 @@ class FishTracker extends Tracker {
             }
         }
     }
-    formatAreaName(name) {
-        let result = name;
-        switch (name) {
+    formatAreaName(id) {
+        let result = id;
+        switch (id) {
             case "rivers":
                 result = "rivers-(Town and Forest)";
                 break;
