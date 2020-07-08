@@ -41,10 +41,37 @@ class Tracker {
         }
 
         for (const value of data) {
+            const graphic: any = $("<figure>")
+                .addClass("tracker-graphic")
+                .appendTo(parent);
+
+            const tooltip: string = this.getGraphicTooltip(value);
             $("<img>")
                 .attr("src", "src/assets/misc/" + value + ".png")
-                .appendTo(parent);
+                .attr("alt", tooltip)
+                .appendTo(graphic);
+            $("<figcaption>")
+                .text(tooltip)
+                .appendTo(graphic);
         }
+    }
+
+    /**
+     * Gets the display text of a graphic's tooltip
+     */
+    private getGraphicTooltip(value: string): string {
+        switch (value) {
+            case "bundle":
+                return "Bundle requirement";
+            case "gift":
+                return "Loved gift";
+            case "quest":
+                return "Quest item";
+            case "recipe":
+                return "Cooking ingredient";
+        }
+
+        return "No tooltip found";
     }
 
     /**

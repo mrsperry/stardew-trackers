@@ -1,0 +1,36 @@
+figure {
+    &.tracker-graphic {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+
+        &:hover figcaption {
+            opacity: 0.9;
+        }
+
+        figcaption {
+            position: absolute;
+            transition: opacity 250ms ease-in-out;
+            color: #FFFFFF;
+            background-color: #222222;
+            opacity: 0;
+            border-radius: 0.5rem;
+            width: max-content;
+            top: 2rem;
+            padding: 0.2rem 0.5rem;
+
+            &::after {
+                content: "";
+                position: absolute;
+                margin-left: -0.3rem;
+                border-width: 0.3rem;
+                border-style: solid;
+                border-color: transparent transparent #222222 transparent;
+                bottom: 100%;
+                left: 50%;
+            }
+        }
+    }
+}
