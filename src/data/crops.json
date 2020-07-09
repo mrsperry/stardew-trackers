@@ -264,7 +264,6 @@
         "growth-timer": 24
     },
     "tea-leaves": {
-        "seasons": "any",
         "growth-timer": 20,
         "regrowth": 1,
         "used-in": "brewing"
