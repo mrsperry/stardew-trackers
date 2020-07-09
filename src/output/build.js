@@ -158,7 +158,7 @@ class Tracker {
 }
 class FishTracker extends Tracker {
     constructor(data) {
-        super("fish-trackers");
+        super("fish-tracker");
         for (const season of ["any", "spring", "summer", "fall", "winter"]) {
             const ids = Object.keys(data).filter((fish) => {
                 const fishData = data[fish];
@@ -186,7 +186,7 @@ class FishTracker extends Tracker {
                     .appendTo(header);
             }
             const table = $("<table>")
-                .attr("id", season + "-trackers")
+                .attr("id", season + "-tracker")
                 .appendTo(parent);
             for (const id of ids) {
                 const fish = data[id];

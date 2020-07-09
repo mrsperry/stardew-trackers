@@ -6,7 +6,7 @@ class FishTracker extends Tracker {
      */
     public constructor(data: any) {
         // Pass in the namespace
-        super("fish-trackers");
+        super("fish-tracker");
 
         // Create a table of fish for each season and a table for fish that can be caught in any season
         for (const season of ["any", "spring", "summer", "fall", "winter"]) {
@@ -46,7 +46,7 @@ class FishTracker extends Tracker {
 
             // Create the table
             const table: any = $("<table>")
-                .attr("id", season + "-trackers")
+                .attr("id", season + "-tracker")
                 .appendTo(parent);
             
             // Add each fish from this season to the table
