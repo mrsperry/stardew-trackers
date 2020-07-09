@@ -1,6 +1,6 @@
 class Tracker {
     /** The current namespace this tracker is working under */
-    private namespace: string;
+    protected namespace: string;
 
     /**
      * @param namespace The namespace this tracker is working under
@@ -65,11 +65,15 @@ class Tracker {
                 return "Bundle requirement";
             case "gift":
                 return "Loved gift";
-            case "quest":
-                return "Quest item";
             case "fish-recipe":
             case "crop-recipe":
                 return "Cooking ingredient";
+            case "brewing":
+                return "Brewing ingredient";
+            case "crafting":
+                return "Crafting ingredient";
+            case "quest":
+                return "Quest item";
         }
 
         return "No tooltip found";

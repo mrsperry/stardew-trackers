@@ -23,18 +23,18 @@
             }
         }
 
-        #crop-tracker {
-            color: variables.$crop-text;
-            background-color: variables.$crop-bg;
-            border: 1px solid variables.$crop-border;
+        #crops-tracker {
+            color: variables.$crops-text;
+            background-color: variables.$crops-bg;
+            border: 1px solid variables.$crops-border;
 
             &:hover, &:active {
-                background-color: variables.$crop-bg-hover;
-                box-shadow: 0rem 0rem 2rem variables.$crop-border;
+                background-color: variables.$crops-bg-hover;
+                box-shadow: 0rem 0rem 2rem variables.$crops-border;
             }
 
             h1 {
-                border-bottom: 1px solid variables.$crop-border;
+                border-bottom: 1px solid variables.$crops-border;
             }
         }
 

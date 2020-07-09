@@ -11,6 +11,9 @@ class Main {
             case "fish":
                 new FishTracker(data);
                 break;
+            case "crops":
+                new CropTracker(data);
+                break;
         }
     }
 }

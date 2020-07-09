@@ -2,9 +2,13 @@
 class Main {
     static async initialize(type) {
         State.load();
+        const data = await $.getJSON("src/data/" + type + ".json");
         switch (type) {
             case "fish":
-                new FishTracker(await $.getJSON("src/data/fish.json"));
+                new FishTracker(data);
+                break;
+            case "crops":
+                new CropTracker(data);
                 break;
         }
     }
@@ -97,11 +101,15 @@ class Tracker {
                 return "Bundle requirement";
             case "gift":
                 return "Loved gift";
-            case "quest":
-                return "Quest item";
             case "fish-recipe":
             case "crop-recipe":
                 return "Cooking ingredient";
+            case "brewing":
+                return "Brewing ingredient";
+            case "crafting":
+                return "Crafting ingredient";
+            case "quest":
+                return "Quest item";
         }
         return "No tooltip found";
     }
@@ -154,6 +162,61 @@ class Tracker {
         for (const row of rows) {
             $(row).toggleClass("checked");
         }
+    }
+}
+class CropTracker extends Tracker {
+    constructor(data) {
+        super("crops-tracker");
+        for (const season of ["any", "spring", "summer", "fall"]) {
+            const ids = Object.keys(data).filter((crop) => {
+                const cropData = data[crop];
+                if (season == "any") {
+                    return cropData.seasons == null;
+                }
+                return cropData.seasons != null && (cropData.seasons == season || cropData.seasons.includes(season));
+            });
+            const parent = $("<div>")
+                .addClass("section")
+                .appendTo("#" + this.namespace + "-content");
+            const header = $("<div>")
+                .addClass("graphic-header")
+                .appendTo(parent);
+            $("<h1>")
+                .text(season == "any" ? "Any season" : Utils.capitalize(season))
+                .appendTo(header);
+            if (season != "any") {
+                $("<img>")
+                    .attr("src", "src/assets/misc/" + season + ".png")
+                    .prependTo(header);
+                $("<img>")
+                    .attr("src", "src/assets/misc/" + season + ".png")
+                    .appendTo(header);
+            }
+            const table = $("<table>")
+                .attr("id", season + "-tracker")
+                .appendTo(parent);
+            for (const id of ids) {
+                const crop = data[id];
+                const row = $("<tr>")
+                    .attr("type", id)
+                    .appendTo(table);
+                const cell = $("<td>")
+                    .appendTo(row);
+                const holder = $("<div>")
+                    .addClass("info-holder")
+                    .appendTo(cell);
+                $("<img>")
+                    .attr("src", "src/assets/crops/" + id + ".png")
+                    .appendTo(holder);
+                $("<span>")
+                    .text(Utils.formatID(id))
+                    .appendTo(holder);
+                super.addGraphicInformation(row, crop.seasons, "season");
+                super.addGraphic(row, crop["used-in"]);
+            }
+            super.registerEvents(table);
+        }
+        super.markRows();
     }
 }
 class FishTracker extends Tracker {
