@@ -31,7 +31,7 @@
         "times": "6pm-2am",
         "used-in": [
             "bundle",
-            "recipe"
+            "fish-recipe"
         ]
     },
     "bullhead": {
@@ -46,7 +46,7 @@
         ],
         "used-in": [
             "bundle",
-            "recipe"
+            "fish-recipe"
         ]
     },
     "catfish": {
@@ -92,7 +92,7 @@
         "weather": "rain",
         "used-in": [
             "bundle",
-            "recipe"
+            "fish-recipe"
         ]
     },
     "flounder": {
@@ -102,7 +102,7 @@
             "spring",
             "summer"
         ],
-        "used-in": "recipe"
+        "used-in": "fish-recipe"
     },
     "ghostfish": {
         "areas": "mines",
@@ -139,7 +139,7 @@
         "times": "6am-7pm",
         "used-in": [
             "bundle",
-            "recipe",
+            "fish-recipe",
             "quest"
         ]
     },
@@ -169,7 +169,7 @@
             "fall",
             "winter"
         ],
-        "used-in": "recipe"
+        "used-in": "fish-recipe"
     },
     "midnight-squid": {
         "areas": "night-market",
@@ -221,7 +221,7 @@
         "times": "6am-7pm",
         "seasons": "summer",
         "weather": "sun",
-        "used-in": "recipe"
+        "used-in": "fish-recipe"
     },
     "red-mullet": {
         "areas": "ocean",
@@ -245,7 +245,7 @@
         "areas": "rivers",
         "times": "6am-7pm",
         "seasons": "fall",
-        "used-in": "recipe"
+        "used-in": "fish-recipe"
     },
     "sandfish": {
         "areas": "calico-desert",
@@ -265,7 +265,7 @@
         ],
         "used-in": [
             "bundle",
-            "recipe"
+            "fish-recipe"
         ]
     },
     "scorpion-carp": {
@@ -280,7 +280,7 @@
             "winter"
         ],
         "used-in": [
-            "recipe",
+            "fish-recipe",
             "quest"
         ]
     },
@@ -317,7 +317,7 @@
         "times": "6pm-2am",
         "seasons": "winter",
         "used-in": [
-            "recipe",
+            "fish-recipe",
             "quest"
         ]
     },
@@ -349,7 +349,7 @@
         ],
         "used-in": [
             "bundle",
-            "recipe"
+            "fish-recipe"
         ]
     },
     "super-cucumber": {
@@ -388,7 +388,7 @@
         ],
         "used-in": [
             "bundle",
-            "recipe"
+            "fish-recipe"
         ]
     },
     "void-salmon": {

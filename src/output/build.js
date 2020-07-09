@@ -99,7 +99,8 @@ class Tracker {
                 return "Loved gift";
             case "quest":
                 return "Quest item";
-            case "recipe":
+            case "fish-recipe":
+            case "crop-recipe":
                 return "Cooking ingredient";
         }
         return "No tooltip found";
