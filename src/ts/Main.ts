@@ -6,9 +6,10 @@ class Main {
     public static async initialize(type: string): Promise<any> {
         State.load();
 
+        const data: any = await $.getJSON("src/data/" + type + ".json");
         switch (type) {
             case "fish":
-                new FishTracker(await $.getJSON("src/data/fish.json"));
+                new FishTracker(data);
                 break;
         }
     }
