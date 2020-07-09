@@ -1,0 +1,312 @@
+{
+    "amaranth": {
+        "seasons": "fall",
+        "growth-timer": 7,
+        "used-in": [
+            "crop-recipe",
+            "quest"
+        ]
+    },
+    "ancient-fruit": {
+        "seasons": [
+            "spring",
+            "summer",
+            "fall"
+        ],
+        "growth-timer": 28,
+        "regrowth": 7
+    },
+    "artichoke": {
+        "seasons": "fall",
+        "growth-timer": 8,
+        "used-in": "crop-recipe"
+    },
+    "beet": {
+        "seasons": "fall",
+        "growth-timer": 6,
+        "used-in": [
+            "gift",
+            "crop-recipe",
+            "quest"
+        ]
+    },
+    "blueberry": {
+        "seasons": "summer",
+        "growth-timer": 13,
+        "regrowth": 4,
+        "used-in": [
+            "bundle",
+            "crop-recipe"
+        ]
+    },
+    "blue-jazz": {
+        "seasons": "spring",
+        "growth-timer": 7,
+        "used-in": "crop-recipe"
+    },
+    "bok-choy": {
+        "seasons": "fall",
+        "growth-timer": 4,
+        "used-in": "crop-recipe"
+    },
+    "cactus-fruit": {
+        "seasons": "indoors",
+        "growth-timer": 12,
+        "regrowth": 3,
+        "used-in": [
+            "bundle",
+            "gift"
+        ]
+    },
+    "cauliflower": {
+        "seasons": "spring",
+        "growth-timer": 12,
+        "used-in": [
+            "bundle",
+            "gift",
+            "crop-recipe",
+            "quest"
+        ]
+    },
+    "coffee-bean": {
+        "seasons": [
+            "spring",
+            "summer"
+        ],
+        "growth-timer": 10,
+        "regrowth": 2,
+        "used-in": "brewing"
+    },
+    "corn": {
+        "seasons": [
+            "summer",
+            "fall"
+        ],
+        "growth-timer": 13,
+        "regrowth": 4,
+        "used-in": [
+            "bundle",
+            "crop-recipe"
+        ]
+    },
+    "cranberries": {
+        "seasons": "fall",
+        "growth-timer": 7,
+        "regrowth": 5,
+        "used-in": "crop-recipe"
+    },
+    "eggplant": {
+        "seasons": "fall",
+        "growth-timer": 5,
+        "regrowth": 5,
+        "used-in": [
+            "bundle",
+            "crop-recipe"
+        ]
+    },
+    "fairy-rose": {
+        "seasons": "fall",
+        "growth-timer": 12,
+        "used-in": "gift"
+    },
+    "garlic": {
+        "seasons": "spring",
+        "growth-timer": 4,
+        "used-in": [
+            "crop-recipe",
+            "crafting"
+        ]
+    },
+    "grape": {
+        "seasons": [
+            "summer",
+            "fall"
+        ],
+        "growth-timer": 10,
+        "regrowth": 3,
+        "trellis": true,
+        "used-in": [
+            "bundle",
+            "gift",
+            "crafting"
+        ]
+    },
+    "green-bean": {
+        "seasons": "spring",
+        "growth-timer": 10,
+        "trellis": true,
+        "used-in": [
+            "bundle",
+            "crop-recipe"
+        ]
+    },
+    "hops": {
+        "seasons": "summer",
+        "growth-timer": 11,
+        "regrowth": 1,
+        "trellis": true,
+        "used-in": "brewing"
+    },
+    "hot-pepper": {
+        "seasons": "summer",
+        "growth-timer": 5,
+        "regrowth": 3,
+        "used-in": [
+            "bundle",
+            "gift",
+            "crop-recipe",
+            "quest"
+        ]
+    },
+    "kale": {
+        "seasons": "spring",
+        "growth-timer": 6,
+        "used-in": "crop-recipe"
+    },
+    "melon": {
+        "seasons": "summer",
+        "growth-timer": 12,
+        "used-in": [
+            "bundle",
+            "gift",
+            "crop-recipe",
+            "quest"
+        ]
+    },
+    "parsnip": {
+        "seasons": "spring",
+        "growth-timer": 4,
+        "used-in": [
+            "bundle",
+            "gift",
+            "crop-recipe"
+        ]
+    },
+    "poppy": {
+        "seasons": "summer",
+        "growth-timer": 7,
+        "used-in": [
+            "bundle",
+            "gift",
+            "crop-recipe"
+        ]
+    },
+    "potato": {
+        "seasons": "spring",
+        "growth-timer": 6,
+        "used-in": [
+            "bundle",
+            "crop-recipe"
+        ]
+    },
+    "pumpkin": {
+        "seasons": "fall",
+        "growth-timer": 13,
+        "used-in": [
+            "bundle",
+            "gift",
+            "crop-recipe",
+            "crafting",
+            "quest"
+        ]
+    },
+    "radish": {
+        "seasons": "summer",
+        "growth-timer": 6,
+        "used-in": "crop-recipe"
+    },
+    "red-cabbage": {
+        "seasons": "summer",
+        "growth-timer": 9,
+        "used-in": [
+            "bundle",
+            "crop-recipe"
+        ]
+    },
+    "rhubarb": {
+        "seasons": "spring",
+        "growth-timer": 13,
+        "used-in": "crop-recipe"
+    },
+    "starfruit": {
+        "seasons": "summer",
+        "growth-timer": 13,
+        "used-in": [
+            "crafting",
+            "quest"
+        ]
+    },
+    "strawberry": {
+        "seasons": "spring",
+        "growth-timer": 8,
+        "regrowth": 4,
+        "used-in": "gift"
+    },
+    "summer-spangle": {
+        "seasons": "summer",
+        "growth-timer": 8,
+        "used-in": "gift"
+    },
+    "sunflower": {
+        "seasons": [
+            "summer",
+            "fall"
+        ],
+        "growth-timer": 8,
+        "used-in": [
+            "bundle",
+            "gift",
+            "crop-recipe"
+        ]
+    },
+    "sweet-gem-berry": {
+        "seasons": "fall",
+        "growth-timer": 24
+    },
+    "tea-leaves": {
+        "seasons": "any",
+        "growth-timer": 20,
+        "regrowth": 1,
+        "used-in": "brewing"
+    },
+    "tomato": {
+        "seasons": "summer",
+        "growth-timer": 11,
+        "regrowth": 4,
+        "used-in": [
+            "bundle",
+            "crop-recipe"
+        ]
+    },
+    "tulip": {
+        "seasons": "spring",
+        "growth-timer": 6,
+        "used-in": "gift"
+    },
+    "rice": {
+        "seasons": "spring",
+        "growth-timer": 6,
+        "used-in": "crop-recipe"
+    },
+    "wheat": {
+        "seasons": [
+            "summer",
+            "fall"
+        ],
+        "growth-timer": 4,
+        "used-in": [
+            "bundle",
+            "crop-recipe",
+            "brewing"
+        ]
+    },
+    "yam": {
+        "seasons": "fall",
+        "growth-timer": 10,
+        "used-in": [
+            "bundle",
+            "gift",
+            "crop-recipe"
+        ]
+    }
+}
