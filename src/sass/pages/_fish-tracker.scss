@@ -1,10 +1,5 @@
 @use "../utils/variables";
 
-body {
-    background-color: hsl(210, 100%, 90%);
-    background-image: radial-gradient(#FFFFFF, hsl(210, 100%, 90%));
-}
-
 #fish-tracker {
     align-self: center;
     color: variables.$fish-text;
