@@ -67,6 +67,10 @@ class CropTracker extends Tracker {
             
                 // Add auxillary information
                 super.addGraphicInformation(row, crop.seasons, "season");
+                this.addGrowthInformation(row, crop["growth-timer"]);
+                this.addRegrowthInformation(row, crop.regrowth);
+                this.addCheckmark(row, crop.polyculture);
+                this.addCheckmark(row, crop.trellis);
                 super.addGraphic(row, crop["used-in"]);
             }
 
@@ -76,5 +80,28 @@ class CropTracker extends Tracker {
 
         // Mark the rows that have been previously checked
         super.markRows();
+    }
+
+    private addGrowthInformation(row: any, growthTimer: number): void {
+        $("<td>")
+            .text(growthTimer + " day" + (growthTimer > 1 ? "s" : ""))
+            .appendTo(row);
+    }
+
+    private addRegrowthInformation(row: any, regrowth: any): void {
+        if (regrowth == null) {
+            $("<td>")
+                .text("N/A")
+                .appendTo(row);
+            return;
+        }
+
+        this.addGrowthInformation(row, regrowth);
+    }
+
+    private addCheckmark(row: any, data: any): void {
+        $("<td>")
+            .text(data == true ? "Yes" : "No")
+            .appendTo(row);
     }
 }

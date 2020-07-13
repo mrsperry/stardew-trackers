@@ -2,6 +2,7 @@
     "amaranth": {
         "seasons": "fall",
         "growth-timer": 7,
+        "polyculture": true,
         "used-in": [
             "crop-recipe",
             "quest"
@@ -19,11 +20,13 @@
     "artichoke": {
         "seasons": "fall",
         "growth-timer": 8,
+        "polyculture": true,
         "used-in": "crop-recipe"
     },
     "beet": {
         "seasons": "fall",
         "growth-timer": 6,
+        "polyculture": true,
         "used-in": [
             "gift",
             "crop-recipe",
@@ -34,6 +37,7 @@
         "seasons": "summer",
         "growth-timer": 13,
         "regrowth": 4,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "crop-recipe"
@@ -47,6 +51,7 @@
     "bok-choy": {
         "seasons": "fall",
         "growth-timer": 4,
+        "polyculture": true,
         "used-in": "crop-recipe"
     },
     "cactus-fruit": {
@@ -61,6 +66,7 @@
     "cauliflower": {
         "seasons": "spring",
         "growth-timer": 12,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "gift",
@@ -75,6 +81,7 @@
         ],
         "growth-timer": 10,
         "regrowth": 2,
+        "polyculture": true,
         "used-in": "brewing"
     },
     "corn": {
@@ -84,6 +91,7 @@
         ],
         "growth-timer": 13,
         "regrowth": 4,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "crop-recipe"
@@ -93,12 +101,14 @@
         "seasons": "fall",
         "growth-timer": 7,
         "regrowth": 5,
+        "polyculture": true,
         "used-in": "crop-recipe"
     },
     "eggplant": {
         "seasons": "fall",
         "growth-timer": 5,
         "regrowth": 5,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "crop-recipe"
@@ -112,6 +122,7 @@
     "garlic": {
         "seasons": "spring",
         "growth-timer": 4,
+        "polyculture": true,
         "used-in": [
             "crop-recipe",
             "crafting"
@@ -124,6 +135,7 @@
         ],
         "growth-timer": 10,
         "regrowth": 3,
+        "polyculture": true,
         "trellis": true,
         "used-in": [
             "bundle",
@@ -134,6 +146,7 @@
     "green-bean": {
         "seasons": "spring",
         "growth-timer": 10,
+        "polyculture": true,
         "trellis": true,
         "used-in": [
             "bundle",
@@ -144,6 +157,7 @@
         "seasons": "summer",
         "growth-timer": 11,
         "regrowth": 1,
+        "polyculture": true,
         "trellis": true,
         "used-in": "brewing"
     },
@@ -151,6 +165,7 @@
         "seasons": "summer",
         "growth-timer": 5,
         "regrowth": 3,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "gift",
@@ -161,11 +176,13 @@
     "kale": {
         "seasons": "spring",
         "growth-timer": 6,
+        "polyculture": true,
         "used-in": "crop-recipe"
     },
     "melon": {
         "seasons": "summer",
         "growth-timer": 12,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "gift",
@@ -176,6 +193,7 @@
     "parsnip": {
         "seasons": "spring",
         "growth-timer": 4,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "gift",
@@ -194,6 +212,7 @@
     "potato": {
         "seasons": "spring",
         "growth-timer": 6,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "crop-recipe"
@@ -202,6 +221,7 @@
     "pumpkin": {
         "seasons": "fall",
         "growth-timer": 13,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "gift",
@@ -213,11 +233,13 @@
     "radish": {
         "seasons": "summer",
         "growth-timer": 6,
+        "polyculture": true,
         "used-in": "crop-recipe"
     },
     "red-cabbage": {
         "seasons": "summer",
         "growth-timer": 9,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "crop-recipe"
@@ -226,11 +248,13 @@
     "rhubarb": {
         "seasons": "spring",
         "growth-timer": 13,
+        "polyculture": true,
         "used-in": "crop-recipe"
     },
     "starfruit": {
         "seasons": "summer",
         "growth-timer": 13,
+        "polyculture": true,
         "used-in": [
             "crafting",
             "quest"
@@ -240,6 +264,7 @@
         "seasons": "spring",
         "growth-timer": 8,
         "regrowth": 4,
+        "polyculture": true,
         "used-in": "gift"
     },
     "summer-spangle": {
@@ -272,6 +297,7 @@
         "seasons": "summer",
         "growth-timer": 11,
         "regrowth": 4,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "crop-recipe"
@@ -293,6 +319,7 @@
             "fall"
         ],
         "growth-timer": 4,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "crop-recipe",
@@ -302,6 +329,7 @@
     "yam": {
         "seasons": "fall",
         "growth-timer": 10,
+        "polyculture": true,
         "used-in": [
             "bundle",
             "gift",
