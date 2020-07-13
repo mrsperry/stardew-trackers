@@ -29,7 +29,7 @@
             border: 1px solid variables.$crops-border;
 
             &:hover, &:active {
-                background-color: variables.$crops-bg-hover;
+                background-color: variables.$crops-checked-hover;
                 box-shadow: 0rem 0rem 2rem variables.$crops-border;
             }
 
