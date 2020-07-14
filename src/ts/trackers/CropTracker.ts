@@ -69,8 +69,8 @@ class CropTracker extends Tracker {
                 super.addGraphicInformation(row, crop.seasons, "season");
                 this.addGrowthInformation(row, crop["growth-timer"]);
                 this.addRegrowthInformation(row, crop.regrowth);
-                this.addCheckmark(row, crop.polyculture);
-                this.addCheckmark(row, crop.trellis);
+                this.addCheckedInformation(row, crop.polyculture, "polyculture", "Not used in polyculture");
+                this.addCheckedInformation(row, crop.trellis, "trellis", "Does not use a trellis");
                 super.addGraphic(row, crop["used-in"]);
             }
 
@@ -99,9 +99,11 @@ class CropTracker extends Tracker {
         this.addGrowthInformation(row, regrowth);
     }
 
-    private addCheckmark(row: any, data: any): void {
-        $("<td>")
-            .text(data == true ? "Yes" : "No")
-            .appendTo(row);
+    private addCheckedInformation(row: any, data: any, type: string, tooltip: string): void {
+        if (data) {
+            super.addGraphic(row, data ? type : null);
+        } else {
+            super.addGraphic(row, "cross", tooltip);
+        }
     }
 }

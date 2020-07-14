@@ -69,7 +69,7 @@ class Tracker {
             }
         });
     }
-    addGraphic(row, data) {
+    addGraphic(row, data, tooltip) {
         const element = $("<td>")
             .appendTo(row);
         const parent = $("<div>")
@@ -85,13 +85,13 @@ class Tracker {
             const graphic = $("<figure>")
                 .addClass("tracker-graphic")
                 .appendTo(parent);
-            const tooltip = this.getGraphicTooltip(value);
+            const tip = tooltip ? tooltip : this.getGraphicTooltip(value);
             $("<img>")
                 .attr("src", "src/assets/misc/" + value + ".png")
-                .attr("alt", tooltip)
+                .attr("alt", tip)
                 .appendTo(graphic);
             $("<figcaption>")
-                .text(tooltip)
+                .text(tip)
                 .appendTo(graphic);
         }
     }
@@ -110,6 +110,10 @@ class Tracker {
                 return "Crafting ingredient";
             case "quest":
                 return "Quest item";
+            case "polyculture":
+                return "Used in polyculture";
+            case "trellis":
+                return "Uses a trellis";
         }
         return "No tooltip found";
     }
@@ -214,8 +218,8 @@ class CropTracker extends Tracker {
                 super.addGraphicInformation(row, crop.seasons, "season");
                 this.addGrowthInformation(row, crop["growth-timer"]);
                 this.addRegrowthInformation(row, crop.regrowth);
-                this.addCheckmark(row, crop.polyculture);
-                this.addCheckmark(row, crop.trellis);
+                this.addCheckedInformation(row, crop.polyculture, "polyculture", "Not used in polyculture");
+                this.addCheckedInformation(row, crop.trellis, "trellis", "Does not use a trellis");
                 super.addGraphic(row, crop["used-in"]);
             }
             super.registerEvents(table);
@@ -236,10 +240,13 @@ class CropTracker extends Tracker {
         }
         this.addGrowthInformation(row, regrowth);
     }
-    addCheckmark(row, data) {
-        $("<td>")
-            .text(data == true ? "Yes" : "No")
-            .appendTo(row);
+    addCheckedInformation(row, data, type, tooltip) {
+        if (data) {
+            super.addGraphic(row, data ? type : null);
+        }
+        else {
+            super.addGraphic(row, "cross", tooltip);
+        }
     }
 }
 class FishTracker extends Tracker {

@@ -25,7 +25,7 @@ class Tracker {
      * @param row The row to add the graphic to
      * @param data The JSON data to parse
      */
-    protected addGraphic(row: any, data: any): void {
+    protected addGraphic(row: any, data: any, tooltip?: string): void {
         const element: any = $("<td>")
             .appendTo(row);
         const parent = $("<div>")
@@ -45,13 +45,13 @@ class Tracker {
                 .addClass("tracker-graphic")
                 .appendTo(parent);
 
-            const tooltip: string = this.getGraphicTooltip(value);
+            const tip: string = tooltip ? tooltip : this.getGraphicTooltip(value);
             $("<img>")
                 .attr("src", "src/assets/misc/" + value + ".png")
-                .attr("alt", tooltip)
+                .attr("alt", tip)
                 .appendTo(graphic);
             $("<figcaption>")
-                .text(tooltip)
+                .text(tip)
                 .appendTo(graphic);
         }
     }
@@ -74,6 +74,10 @@ class Tracker {
                 return "Crafting ingredient";
             case "quest":
                 return "Quest item";
+            case "polyculture":
+                return "Used in polyculture";
+            case "trellis":
+                return "Uses a trellis";
         }
 
         return "No tooltip found";
