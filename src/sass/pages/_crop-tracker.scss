@@ -33,18 +33,18 @@
 
         tr {
             &:first-of-type {
-                td {
+                th {
                     border-top: 1px solid variables.$crops-border;
                 }
             }
 
             &:hover, &:active {
-                &:not(.checked) {
+                &:not(.checked):not(.table-headers) {
                     background-color: variables.$crops-not-checked-hover;
                 }
             }
 
-            td {
+            th, td {
                 border-bottom: 1px solid variables.$crops-border;
 
                 &:first-of-type {

@@ -7,7 +7,6 @@ table {
     tr {
         cursor: pointer;
         transition: background-color 150ms ease-in-out;
-        padding: 0.35rem;
         height: 5rem;
 
         &.checked {
@@ -21,7 +20,7 @@ table {
         }
         
         &:first-of-type {
-            td {
+            th, td {
                 &:first-of-type {
                     border-radius: 1rem 0rem 0rem;
                 }
@@ -41,6 +40,15 @@ table {
                 &:last-of-type {
                     border-radius: 0rem 0rem 1rem;
                 }
+            }
+        }
+
+        &.table-headers {
+            cursor: default;
+            height: 2.5rem;
+
+            th {
+                padding: 0rem 1rem;
             }
         }
 

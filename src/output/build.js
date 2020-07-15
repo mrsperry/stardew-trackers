@@ -196,6 +196,30 @@ class CropTracker extends Tracker {
             const table = $("<table>")
                 .attr("id", season + "-tracker")
                 .appendTo(parent);
+            const headers = $("<tr>")
+                .addClass("table-headers")
+                .appendTo(table);
+            $("<th>")
+                .text("Name")
+                .appendTo(headers);
+            $("<th>")
+                .text("Season")
+                .appendTo(headers);
+            $("<th>")
+                .text("Growth")
+                .appendTo(headers);
+            $("<th>")
+                .text("Regrowth")
+                .appendTo(headers);
+            $("<th>")
+                .text("Polyculture")
+                .appendTo(headers);
+            $("<th>")
+                .text("Trellis")
+                .appendTo(headers);
+            $("<th>")
+                .text("Used In")
+                .appendTo(headers);
             for (const id of ids) {
                 const crop = data[id];
                 const row = $("<tr>")
