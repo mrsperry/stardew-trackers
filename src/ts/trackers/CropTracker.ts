@@ -1,6 +1,9 @@
 /// <reference path="./Tracker.ts"/>
 
 class CropTracker extends Tracker {
+    /**
+     * @param data JSON state retrieved from the data folder
+     */
     public constructor(data: any) {
         super("crops-tracker");
 
@@ -89,8 +92,8 @@ class CropTracker extends Tracker {
                 super.addGraphicInformation(row, crop.seasons, "season");
                 this.addGrowthInformation(row, crop["growth-timer"]);
                 this.addRegrowthInformation(row, crop.regrowth);
-                this.addCheckedInformation(row, crop.polyculture, "polyculture", "Not used in polyculture");
-                this.addCheckedInformation(row, crop.trellis, "trellis", "Does not use a trellis");
+                this.addCheckedGraphic(row, crop.polyculture, "polyculture", "Not used in polyculture");
+                this.addCheckedGraphic(row, crop.trellis, "trellis", "Does not use a trellis");
                 super.addGraphic(row, crop["used-in"]);
             }
 
@@ -102,12 +105,22 @@ class CropTracker extends Tracker {
         super.markRows();
     }
 
+    /**
+     * Adds information on the number of days it takes for a crop to grow
+     * @param row The row to add to
+     * @param growthTimer The number of days the crop will take to grow
+     */
     private addGrowthInformation(row: any, growthTimer: number): void {
         $("<td>")
             .text(growthTimer + " day" + (growthTimer > 1 ? "s" : ""))
             .appendTo(row);
     }
 
+    /**
+     * Adds information on the number of days it takes for a crop to regrow
+     * @param row The row to add to
+     * @param regrowth The number of days the crop will take to regrow
+     */
     private addRegrowthInformation(row: any, regrowth: any): void {
         if (regrowth == null) {
             $("<td>")
@@ -119,7 +132,14 @@ class CropTracker extends Tracker {
         this.addGrowthInformation(row, regrowth);
     }
 
-    private addCheckedInformation(row: any, data: any, type: string, tooltip: string): void {
+    /**
+     * Adds a graphic if the data provided is true, otherwise add a red 'cross' graphic with the given tooltip
+     * @param row The row to add to
+     * @param data The data to check
+     * @param type The type of graphic to add if the data is true
+     * @param tooltip The tooltip to use for the cross graphic if the data is false
+     */
+    private addCheckedGraphic(row: any, data: any, type: string, tooltip: string): void {
         if (data) {
             super.addGraphic(row, data ? type : null);
         } else {
