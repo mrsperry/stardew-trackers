@@ -5,15 +5,9 @@ class CropTracker extends Tracker {
         super("crops-tracker");
 
         // Create a table of crops for each season
-        for (const season of ["any", "spring", "summer", "fall"]) {
+        for (const season of ["spring", "summer", "fall"]) {
             const ids: string[] = Object.keys(data).filter((crop: string): boolean => {
                 const cropData: any = data[crop];
-
-                // If no season is provided, assume any season
-                if (season == "any") {
-                    return cropData.seasons == null;
-                }
-
                 return cropData.seasons != null && (cropData.seasons == season || cropData.seasons.includes(season));
             });
 

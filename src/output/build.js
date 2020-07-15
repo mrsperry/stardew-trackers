@@ -171,12 +171,9 @@ class Tracker {
 class CropTracker extends Tracker {
     constructor(data) {
         super("crops-tracker");
-        for (const season of ["any", "spring", "summer", "fall"]) {
+        for (const season of ["spring", "summer", "fall"]) {
             const ids = Object.keys(data).filter((crop) => {
                 const cropData = data[crop];
-                if (season == "any") {
-                    return cropData.seasons == null;
-                }
                 return cropData.seasons != null && (cropData.seasons == season || cropData.seasons.includes(season));
             });
             const parent = $("<div>")

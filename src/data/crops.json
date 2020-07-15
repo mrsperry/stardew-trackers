@@ -289,6 +289,11 @@
         "growth-timer": 24
     },
     "tea-leaves": {
+        "seasons": [
+            "spring",
+            "summer",
+            "fall"
+        ],
         "growth-timer": 20,
         "regrowth": 1,
         "used-in": "brewing"
