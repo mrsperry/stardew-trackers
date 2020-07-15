@@ -302,6 +302,27 @@ class FishTracker extends Tracker {
             const table = $("<table>")
                 .attr("id", season + "-tracker")
                 .appendTo(parent);
+            const headers = $("<tr>")
+                .addClass("table-headers")
+                .appendTo(table);
+            $("<th>")
+                .text("Name")
+                .appendTo(headers);
+            $("<th>")
+                .text("Areas")
+                .appendTo(headers);
+            $("<th>")
+                .text("Times")
+                .appendTo(headers);
+            $("<th>")
+                .text("Seasons")
+                .appendTo(headers);
+            $("<th>")
+                .text("Weather")
+                .appendTo(headers);
+            $("<th>")
+                .text("Used In")
+                .appendTo(headers);
             for (const id of ids) {
                 const fish = data[id];
                 const row = $("<tr>")
