@@ -45,7 +45,7 @@ class CropTracker extends Tracker {
                 .text("Name")
                 .appendTo(headers);
             $("<th>")
-                .text("Season")
+                .text("Seasons")
                 .appendTo(headers);
             $("<th>")
                 .text("Growth")
