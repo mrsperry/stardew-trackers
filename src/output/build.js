@@ -203,7 +203,7 @@ class CropTracker extends Tracker {
                 .text("Name")
                 .appendTo(headers);
             $("<th>")
-                .text("Season")
+                .text("Seasons")
                 .appendTo(headers);
             $("<th>")
                 .text("Growth")
@@ -309,13 +309,13 @@ class FishTracker extends Tracker {
                 .text("Name")
                 .appendTo(headers);
             $("<th>")
+                .text("Seasons")
+                .appendTo(headers);
+            $("<th>")
                 .text("Areas")
                 .appendTo(headers);
             $("<th>")
                 .text("Times")
-                .appendTo(headers);
-            $("<th>")
-                .text("Seasons")
                 .appendTo(headers);
             $("<th>")
                 .text("Weather")
@@ -339,9 +339,9 @@ class FishTracker extends Tracker {
                 $("<span>")
                     .text(Utils.formatID(id))
                     .appendTo(holder);
+                super.addGraphicInformation(row, fish.seasons, "season");
                 this.addAreaInformation(row, fish.areas);
                 this.addTimeInformation(row, fish.times);
-                super.addGraphicInformation(row, fish.seasons, "season");
                 super.addGraphicInformation(row, fish.weather, "weather");
                 super.addGraphic(row, fish["used-in"]);
             }

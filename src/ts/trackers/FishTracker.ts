@@ -57,13 +57,13 @@ class FishTracker extends Tracker {
                 .text("Name")
                 .appendTo(headers);
             $("<th>")
+                .text("Seasons")
+                .appendTo(headers);
+            $("<th>")
                 .text("Areas")
                 .appendTo(headers);
             $("<th>")
                 .text("Times")
-                .appendTo(headers);
-            $("<th>")
-                .text("Seasons")
                 .appendTo(headers);
             $("<th>")
                 .text("Weather")
@@ -95,9 +95,9 @@ class FishTracker extends Tracker {
                     .appendTo(holder);
             
                 // Add auxillary information
+                super.addGraphicInformation(row, fish.seasons, "season");
                 this.addAreaInformation(row, fish.areas);
                 this.addTimeInformation(row, fish.times);
-                super.addGraphicInformation(row, fish.seasons, "season");
                 super.addGraphicInformation(row, fish.weather, "weather");
                 super.addGraphic(row, fish["used-in"]);
             }
