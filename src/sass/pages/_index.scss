@@ -15,7 +15,6 @@
 
             &:hover, &:active {
                 background-color: variables.$fish-bg-hover;
-                box-shadow: 0rem 0rem 2rem variables.$fish-border;
             }
 
             h1 {
@@ -30,7 +29,6 @@
 
             &:hover, &:active {
                 background-color: variables.$crops-checked-hover;
-                box-shadow: 0rem 0rem 2rem variables.$crops-border;
             }
 
             h1 {
@@ -45,7 +43,6 @@
 
             &:hover, &:active {
                 background-color: variables.$npc-bg-hover;
-                box-shadow: 0rem 0rem 2rem variables.$npc-border;
             }
 
 
@@ -57,13 +54,17 @@
         .card {
             cursor: pointer;
             text-align: center;
-            box-shadow: 0.5rem 0.5rem 1rem #DDDDDD;
+            box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.25);
             transition: all 250ms ease-in-out;
             width: 30rem;
             height: 10rem;
             border-radius: 1rem;
             padding: 2rem;
             margin: 2rem;
+
+            &:hover, &:active {
+                box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.35);
+            }
 
             h1 {
                 width: 100%;
