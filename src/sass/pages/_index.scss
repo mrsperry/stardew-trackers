@@ -10,11 +10,11 @@
         /* Can't use `@each` loop because SCSS doesn't support getting variable names with it */
         #fish-tracker {
             color: variables.$fish-text;
-            background-color: variables.$fish-bg;
+            background-color: variables.$fish-card-bg;
             border: 1px solid variables.$fish-border;
 
             &:hover, &:active {
-                background-color: variables.$fish-bg-hover;
+                background-color: variables.$fish-card-hover;
             }
 
             h1 {
