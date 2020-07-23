@@ -24,11 +24,11 @@
 
         #crops-tracker {
             color: variables.$crops-text;
-            background-color: variables.$crops-bg;
+            background-color: variables.$crops-card-bg;
             border: 1px solid variables.$crops-border;
 
             &:hover, &:active {
-                background-color: variables.$crops-checked-hover;
+                background-color: variables.$crops-card-hover;
             }
 
             h1 {

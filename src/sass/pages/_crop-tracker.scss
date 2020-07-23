@@ -29,7 +29,7 @@
     }
 
     table {
-        background-color: variables.$crops-item-bg;
+        background-color: variables.$crops-table-bg;
 
         tr {
             &:first-of-type {
@@ -40,7 +40,7 @@
 
             &:hover, &:active {
                 &:not(.checked):not(.table-headers) {
-                    background-color: variables.$crops-not-checked-hover;
+                    background-color: variables.$crops-table-item-hover;
                 }
             }
 
