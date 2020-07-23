@@ -36,21 +36,6 @@
             }
         }
 
-        #npc-tracker {
-            color: variables.$npc-text;
-            background-color: variables.$npc-bg;
-            border: 1px solid variables.$npc-border;
-
-            &:hover, &:active {
-                background-color: variables.$npc-bg-hover;
-            }
-
-
-            h1 {
-                border-bottom: 1px solid variables.$npc-border;
-            }
-        }
-
         .card {
             cursor: pointer;
             text-align: center;
