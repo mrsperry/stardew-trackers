@@ -8,6 +8,9 @@ class Tracker {
     protected constructor(namespace: string) {
         this.namespace = namespace;
 
+        $("#" + namespace)
+            .hide();
+
         $("#reset-tracker")
             .on("click", (): void => {
                 // Clear local storage data
@@ -142,6 +145,19 @@ class Tracker {
                 this.toggleRows(id);
             }
         }
+    }
+
+    /**
+     * Removes the tracker cover after the tracker has loaded
+     */
+    protected completeInitialization(): void {
+        const cover: any = $("#tracker-cover")
+            .delay(1250)
+            .fadeOut(1000, (): void => cover.remove());
+
+        $("#loading-progress")
+            .delay(1000)
+            .fadeOut(250, (): any => $("#" + this.namespace).show());
     }
 
     /**

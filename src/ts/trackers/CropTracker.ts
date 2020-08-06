@@ -103,6 +103,7 @@ class CropTracker extends Tracker {
 
         // Mark the rows that have been previously checked
         super.markRows();
+        super.completeInitialization();
     }
 
     /**

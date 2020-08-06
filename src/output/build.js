@@ -61,6 +61,8 @@ class Utils {
 class Tracker {
     constructor(namespace) {
         this.namespace = namespace;
+        $("#" + namespace)
+            .hide();
         $("#reset-tracker")
             .on("click", () => {
             State.reset(this.namespace);
@@ -154,6 +156,14 @@ class Tracker {
             }
         }
     }
+    completeInitialization() {
+        const cover = $("#tracker-cover")
+            .delay(1250)
+            .fadeOut(1000, () => cover.remove());
+        $("#loading-progress")
+            .delay(1000)
+            .fadeOut(250, () => $("#" + this.namespace).show());
+    }
     toggleState(element) {
         const type = $(element).attr("type");
         if (type != null) {
@@ -239,13 +249,14 @@ class CropTracker extends Tracker {
                 super.addGraphicInformation(row, crop.seasons, "season");
                 this.addGrowthInformation(row, crop["growth-timer"]);
                 this.addRegrowthInformation(row, crop.regrowth);
-                this.addCheckedInformation(row, crop.polyculture, "polyculture", "Not used in polyculture");
-                this.addCheckedInformation(row, crop.trellis, "trellis", "Does not use a trellis");
+                this.addCheckedGraphic(row, crop.polyculture, "polyculture", "Not used in polyculture");
+                this.addCheckedGraphic(row, crop.trellis, "trellis", "Does not use a trellis");
                 super.addGraphic(row, crop["used-in"]);
             }
             super.registerEvents(table);
         }
         super.markRows();
+        super.completeInitialization();
     }
     addGrowthInformation(row, growthTimer) {
         $("<td>")
@@ -261,7 +272,7 @@ class CropTracker extends Tracker {
         }
         this.addGrowthInformation(row, regrowth);
     }
-    addCheckedInformation(row, data, type, tooltip) {
+    addCheckedGraphic(row, data, type, tooltip) {
         if (data) {
             super.addGraphic(row, data ? type : null);
         }
@@ -348,6 +359,7 @@ class FishTracker extends Tracker {
             super.registerEvents(table);
         }
         super.markRows();
+        super.completeInitialization();
     }
     addAreaInformation(row, areas) {
         const element = $("<td>")
