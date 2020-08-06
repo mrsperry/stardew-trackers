@@ -113,6 +113,7 @@ class Tracker {
 
             $("<img>")
                 .attr("src", "src/assets/misc/" + value + ".png")
+                .attr("alt", Utils.capitalize(value))
                 .appendTo(holder);
             $("<span>")
                 .text(Utils.capitalize(value))

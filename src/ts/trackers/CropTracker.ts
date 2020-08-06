@@ -29,9 +29,11 @@ class CropTracker extends Tracker {
             if (season != "any") {
                 $("<img>")
                     .attr("src", "src/assets/misc/" + season + ".png")
+                    .attr("alt", Utils.capitalize(season))
                     .prependTo(header);
                 $("<img>")
                     .attr("src", "src/assets/misc/" + season + ".png")
+                    .attr("alt", Utils.capitalize(season))
                     .appendTo(header);
             }
 
@@ -83,6 +85,7 @@ class CropTracker extends Tracker {
                 // Add the crop's image and name
                 $("<img>")
                     .attr("src", "src/assets/crops/" + id + ".png")
+                    .attr("alt", Utils.formatID(id))
                     .appendTo(holder);
                 $("<span>")
                     .text(Utils.formatID(id))

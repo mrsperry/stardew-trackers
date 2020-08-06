@@ -135,6 +135,7 @@ class Tracker {
                 .appendTo(element);
             $("<img>")
                 .attr("src", "src/assets/misc/" + value + ".png")
+                .attr("alt", Utils.capitalize(value))
                 .appendTo(holder);
             $("<span>")
                 .text(Utils.capitalize(value))
@@ -198,9 +199,11 @@ class CropTracker extends Tracker {
             if (season != "any") {
                 $("<img>")
                     .attr("src", "src/assets/misc/" + season + ".png")
+                    .attr("alt", Utils.capitalize(season))
                     .prependTo(header);
                 $("<img>")
                     .attr("src", "src/assets/misc/" + season + ".png")
+                    .attr("alt", Utils.capitalize(season))
                     .appendTo(header);
             }
             const table = $("<table>")
@@ -242,6 +245,7 @@ class CropTracker extends Tracker {
                     .appendTo(cell);
                 $("<img>")
                     .attr("src", "src/assets/crops/" + id + ".png")
+                    .attr("alt", Utils.formatID(id))
                     .appendTo(holder);
                 $("<span>")
                     .text(Utils.formatID(id))
@@ -305,9 +309,11 @@ class FishTracker extends Tracker {
             if (season != "any") {
                 $("<img>")
                     .attr("src", "src/assets/misc/" + season + ".png")
+                    .attr("alt", Utils.capitalize(season))
                     .prependTo(header);
                 $("<img>")
                     .attr("src", "src/assets/misc/" + season + ".png")
+                    .attr("alt", Utils.capitalize(season))
                     .appendTo(header);
             }
             const table = $("<table>")
@@ -346,6 +352,7 @@ class FishTracker extends Tracker {
                     .appendTo(cell);
                 $("<img>")
                     .attr("src", "src/assets/fish/" + id + ".png")
+                    .attr("alt", Utils.formatID(id))
                     .appendTo(holder);
                 $("<span>")
                     .text(Utils.formatID(id))
